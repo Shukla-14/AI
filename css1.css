@@ -1,0 +1,209 @@
+/* 🔤 Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 🌐 Navigation */
+/* 🌐 Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  padding: 15px 40px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffdd57;
+  transform: translateY(-2px);
+}
+
+/* 📱 Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #2575fc;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* 🎯 Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  border-radius: 16px;
+  margin: 30px auto;
+  max-width: 1000px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* 🚀 Main Content Cards */
+.main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.main1 {
+  display: flex;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.main1:hover {
+  transform: translateY(-5px);
+}
+
+/* 📄 Left Content */
+.leftbox {
+  flex: 1;
+  padding: 25px;
+}
+
+.leftbox h2 {
+  color: #2575fc;
+  margin-bottom: 15px;
+}
+
+.leftbox h3 {
+  margin-top: 15px;
+  color: #6a11cb;
+}
+
+.leftbox ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.leftbox li {
+  margin-bottom: 6px;
+}
+
+/* 🖼️ Right Image Box */
+.rightbox {
+  flex: 1;
+  position: relative;
+}
+
+.rightbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ✨ Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(37, 117, 252, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.overlay span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.rightbox:hover .overlay {
+  opacity: 1;
+}
+
+/* 🔗 Footer */
+footer {
+  background: #2575fc;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer p {
+  font-size: 0.95rem;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .main1 {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  #item2 a {
+    margin-left: 10px;
+    font-size: 0.9rem;
+  }
+}
